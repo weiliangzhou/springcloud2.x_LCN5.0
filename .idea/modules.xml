@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bankdemo/bank-a/bank-a.iml" filepath="$PROJECT_DIR$/bankdemo/bank-a/bank-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bankdemo/bank-b/bank-b.iml" filepath="$PROJECT_DIR$/bankdemo/bank-b/bank-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bankdemo/bankdemo.iml" filepath="$PROJECT_DIR$/bankdemo/bankdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bankdemo/eureka/eureka.iml" filepath="$PROJECT_DIR$/bankdemo/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springcloud-lcn-master.iml" filepath="$PROJECT_DIR$/.idea/springcloud-lcn-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bankdemo/tx-manager/tx-manager.iml" filepath="$PROJECT_DIR$/bankdemo/tx-manager/tx-manager.iml" />
+    </modules>
+  </component>
+</project>

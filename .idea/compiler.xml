@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bank-a" />
+        <module name="bank-b" />
+        <module name="eureka" />
+        <module name="tx-manager" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bank-a" target="1.8" />
+      <module name="bank-b" target="1.8" />
+      <module name="bankdemo" target="1.8" />
+      <module name="eureka" target="1.8" />
+      <module name="tx-manager" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
