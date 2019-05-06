@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @Description TODO
- * @Author shen
+ * @Author 二师兄
  * @Date 2019/2/26 17:52
  **/
 @org.springframework.stereotype.Service
@@ -21,7 +21,7 @@ public class Service {
 
     @LcnTransaction
     public String start(int money) {
-        String user = "shen";
+        String user = "二师兄";
         String state = bankBClient.addMoney(money,user);
         if ("success".equals(state)){
             Account account =  new Account();

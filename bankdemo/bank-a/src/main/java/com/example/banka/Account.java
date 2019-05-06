@@ -2,7 +2,7 @@ package com.example.banka;
 
 /**
  * @Description TODO
- * @Author shen
+ * @Author 二师兄
  * @Date 2019/2/26 17:59
  **/
 public class Account {
