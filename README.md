@@ -20,12 +20,29 @@ CREATE TABLE `t_tx_exception`  (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 创建MySQL数据库, 名称为: bank-a 
-创建MySQL数据库, 名称为: bank-a 
+DROP TABLE IF EXISTS `bank_a`;
+CREATE TABLE `bank_a`  (
+  `money` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+创建MySQL数据库, 名称为: bank-b
+DROP TABLE IF EXISTS `bank_b`;
+CREATE TABLE `bank_b`  (
+  `money` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `user` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of bank_b
+-- ----------------------------
+INSERT INTO `bank_b` VALUES ('1', '1');
 ###3、添加完以上配置后启动，
       1.eureka
       2.tx_manager  浏览器访问TxManager管理后台http://localhost:7970，默认密码为:codingapi.
       3.bank-a
       4.bank-b
+      
+      测试分布式localhost:7071/start?money=70&user=1
       
 作者:二师兄 QQ382308664      
       
