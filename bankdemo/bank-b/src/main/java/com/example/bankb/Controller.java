@@ -17,8 +17,8 @@ public class Controller {
     Service service;
 
     @GetMapping("/add-money")
-    public String addMoney(@RequestParam("money") int money,
-                        @RequestParam("user")String user){
-        return service.addMoney(money,user);
+    public String addMoney(@RequestParam("money") String money,
+                           @RequestParam("user") String user) {
+        return service.addMoney(money, user);
     }
 }

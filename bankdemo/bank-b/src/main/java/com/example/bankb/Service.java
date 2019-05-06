@@ -1,7 +1,8 @@
 package com.example.bankb;
 
 
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
+import com.codingapi.txlcn.tc.annotation.DTXPropagation;
+import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -16,12 +17,10 @@ public class Service {
     @Autowired
     AccountDao accountDao;
 
-    @LcnTransaction
-    public String addMoney(int money, String user) {
-        Account account = new Account();
-        account.setMoney(money);
-        account.setUser(user);
-        int res =  accountDao.update(account);
-        return res>0?"success":"error";
+    @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
+    @Transactional
+    public String addMoney(String money, String user) {
+        int res = accountDao.update(money, user);
+        return res > 0 ? "success" : "error";
     }
 }

@@ -4,6 +4,7 @@ package com.example.banka;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @Description TODO
@@ -20,8 +21,9 @@ public class Service {
     BankBClient bankBClient;
 
     @LcnTransaction
+    @Transactional
     public String start(int money) {
-        String user = "二师兄";
+        String user = "1";
         String state = bankBClient.addMoney(money,user);
         if ("success".equals(state)){
             Account account =  new Account();
